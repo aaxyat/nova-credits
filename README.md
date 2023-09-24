@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Nova Credit Checker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Nova Credit Checker](./public/screenshot.png)
 
-## Available Scripts
+[![GitHub stars](https://img.shields.io/github/stars/aaxyat/nova-credits.svg)](https://github.com/aaxyat/nova-credits/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/aaxyat/nova-credits.svg)](https://github.com/aaxyat/nova-credits/network/members)
+[![GitHub issues](https://img.shields.io/github/issues/aaxyat/nova-credits.svg)](https://github.com/aaxyat/nova-credits/issues)
 
-In the project directory, you can run:
+Nova Credit Checker is a simple and intuitive app that allows you to check your remaining Nova credits. It's built with React and Material-UI, and it's designed to be user-friendly and secure.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Check your remaining Nova credits in real-time
+- Calculate how many more requests you can make for different services
+- Dark mode for a comfortable viewing experience
+- Displays the time remaining until the next reset
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Security
 
-### `npm test`
+Your security is our top priority. When you enter your API key, it is sent directly from your browser to the Nova API over a secure HTTPS connection. This means that your API key doesn't pass through our servers or Cloudflare, and it can't be intercepted by us or any third parties.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+We don't store your API key in your browser, and we don't use any third-party scripts that could potentially access it. We also use Content Security Policy (CSP) headers to protect against Cross-Site Scripting (XSS) attacks.
 
-### `npm run build`
+However, please remember that your API key is sensitive information. Don't share it with anyone, and don't send it over unsecured connections. If you believe your API key has been compromised, please contact Nova support immediately to have it revoked.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone this repository: `git clone https://github.com/aaxyat/nova-credits.git`
+2. Install the dependencies: `npm install`
+3. Start the app: `npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributing
 
-### `npm run eject`
+We welcome contributions from the community. If you'd like to contribute, please fork this repository, make your changes, and submit a pull request. We'll review your changes and merge them if they're a good fit.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## License
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Support
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you're having issues with this project, please let us know. We're always here to help.
