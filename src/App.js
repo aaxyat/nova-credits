@@ -25,7 +25,7 @@ function App() {
     event.preventDefault();
     setLoading(true);
     setCredits(null); // Clear the previous response
-    if (!apiKey.startsWith('nv-')) {
+    if (!apiKey.startsWith('nv-') || apiKey.length !== 51) {
       setError({
         code: 418,
         message: "Invalid or inactive NovaAI API key!",
