@@ -1,6 +1,6 @@
 # Nova Credit Checker
 
-![Nova Credit Checker](./src/assets/nova-credit-checker.png)
+![Nova Credit Checker](./public/screenshot.png)
 
 [![GitHub stars](https://img.shields.io/github/stars/aaxyat/nova-credits.svg)](https://github.com/aaxyat/nova-credits/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/aaxyat/nova-credits.svg)](https://github.com/aaxyat/nova-credits/network/members)
