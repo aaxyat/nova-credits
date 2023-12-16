@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import moment from 'moment-timezone';
-import { Helmet } from 'react-helmet';
-import { Button, TextField, Typography, CssBaseline, Container, ThemeProvider, createTheme, Card, CardContent, Box, Link, IconButton, Alert } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import AlertTitle from '@mui/lab/AlertTitle';
+import { Alert, Box, Button, Card, CardContent, Container, CssBaseline, IconButton, Link, TextField, ThemeProvider, Typography, createTheme } from '@mui/material';
+import axios from 'axios';
+import moment from 'moment-timezone';
+import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 function App() {
   const [apiKey, setApiKey] = useState('');
@@ -123,7 +123,7 @@ function App() {
           <Typography variant="h5">Time remaining until next reset: {timeRemaining}</Typography>
         </Box>
       </Container>
-      <Box sx={{ mt: 3, textAlign: 'center', position: 'absolute', bottom: 0, width: '100%' }}> {/* This line moves the GitHub section to the bottom */}
+      <Box sx={{ mt: 3, textAlign: 'center', position: 'absolute', bottom: 0, width: '100%' }}>
         <Link href="https://github.com/aaxyat/nova-credits" target="_blank" rel="noopener" color="inherit">
           <IconButton>
             <GitHubIcon />
