@@ -1,10 +1,15 @@
-# Nova Credit Checker
+# Nova Credit Checker [DEPRECATED]
 
 ![Nova Credit Checker](./public/screenshot.png)
 
 [![GitHub stars](https://img.shields.io/github/stars/aaxyat/nova-credits.svg)](https://github.com/aaxyat/nova-credits/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/aaxyat/nova-credits.svg)](https://github.com/aaxyat/nova-credits/network/members)
 [![GitHub issues](https://img.shields.io/github/issues/aaxyat/nova-credits.svg)](https://github.com/aaxyat/nova-credits/issues)
+
+## ⚠️ **_Deprecation Notice_** ⚠️
+
+**_This project is no longer maintained or supported, as NovaOSS has been shut down. The code remains here as a reference._**
+
 
 [Nova Credit Checker](https://novacredits.netlify.app/) is a simple and intuitive app that allows you to check your remaining Nova credits. It's built with React and Material-UI, and it's designed to be user-friendly and secure. You can access the live version of the app [here](https://novacredits.netlify.app/).
 

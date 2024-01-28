@@ -75,63 +75,69 @@ function App() {
   });
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Helmet>
-        <title>Nova Credit Checker</title>
-        <meta name="description" content="A simple app to check your Nova credits" />
-      </Helmet>
-      <Container maxWidth="sm" sx={{ mt: 4 }}>
-        <Typography variant="h4" align="center" gutterBottom>Nova Credit Checker</Typography>
-        <Typography variant="h6" align="center" gutterBottom>A simple app to check your Nova credits</Typography>
-        <form onSubmit={handleSubmit}>
-          <TextField
-            label="API Key"
-            variant="filled"
-            fullWidth
-            value={apiKey}
-            onChange={(e) => setApiKey(e.target.value)}
-            sx={{ mb: 2 }}
-          />
-          <Button variant="contained" type="submit" disabled={loading} fullWidth sx={{ borderRadius: 50, p: 1 }}>
-            {loading ? 'Loading...' : 'Check Nova Credits'}
-          </Button>
-        </form>
-        {error && (
-          <Alert severity="error" sx={{ mt: 3 }}>
-            <AlertTitle>Error</AlertTitle>
-            {error.message} - <strong>{error.tip}</strong>
-            <br />
-            <Link href={error.website} target="_blank" rel="noopener">Visit NovaOSS</Link>
-          </Alert>
-        )}
-        {credits !== null && (
-          <Card sx={{ mt: 3 }}>
-            <CardContent>
-              <Typography variant="h6" align="center" color="primary">Remaining Nova credits: {credits}</Typography>
-              <Typography variant="h6" align="center" color="secondary">You can make:</Typography>
-              {Object.entries(remainingRequests).map(([service, requests]) => (
-                <Typography key={service} variant="body1" align="center">
-                  {requests} more {service} requests
-                </Typography>
-              ))}
-            </CardContent>
-          </Card>
-        )}
-        <Box sx={{ mt: 3, textAlign: 'center' }}>
-          <Typography variant="h5">Nova credits reset at {localResetTime} your local time ({timezoneOffset} GMT).</Typography>
-          <Typography variant="h5">Time remaining until next reset: {timeRemaining}</Typography>
+      <ThemeProvider theme={theme}>
+        <CssBaseline/>
+        <Alert severity="error" sx={{mt: 3, backgroundColor: theme.palette.secondary.main}}>
+          <AlertTitle>⚠️ Deprecation Notice ⚠️</AlertTitle>
+          This project is no longer maintained or supported, as NovaOSS has been shut down. The site remains here as a reference.
+        </Alert>
+        <Helmet>
+          <title>Nova Credit Checker</title>
+          <meta name="description" content="A simple app to check your Nova credits"/>
+        </Helmet>
+        <Container maxWidth="sm" sx={{mt: 4}}>
+          <Typography variant="h4" align="center" gutterBottom>Nova Credit Checker</Typography>
+          <Typography variant="h6" align="center" gutterBottom>A simple app to check your Nova credits</Typography>
+          <form onSubmit={handleSubmit}>
+            <TextField
+                label="API Key"
+                variant="filled"
+                fullWidth
+                value={apiKey}
+                onChange={(e) => setApiKey(e.target.value)}
+                sx={{mb: 2}}
+            />
+            <Button variant="contained" type="submit" disabled={loading} fullWidth sx={{borderRadius: 50, p: 1}}>
+              {loading ? 'Loading...' : 'Check Nova Credits'}
+            </Button>
+          </form>
+          {error && (
+              <Alert severity="error" sx={{mt: 3}}>
+                <AlertTitle>Error</AlertTitle>
+                {error.message} - <strong>{error.tip}</strong>
+                <br/>
+                <Link href={error.website} target="_blank" rel="noopener">Visit NovaOSS</Link>
+              </Alert>
+          )}
+          {credits !== null && (
+              <Card sx={{mt: 3}}>
+                <CardContent>
+                  <Typography variant="h6" align="center" color="primary">Remaining Nova credits: {credits}</Typography>
+                  <Typography variant="h6" align="center" color="secondary">You can make:</Typography>
+                  {Object.entries(remainingRequests).map(([service, requests]) => (
+                      <Typography key={service} variant="body1" align="center">
+                        {requests} more {service} requests
+                      </Typography>
+                  ))}
+                </CardContent>
+              </Card>
+          )}
+          <Box sx={{mt: 3, textAlign: 'center'}}>
+            <Typography variant="h5">Nova credits reset at {localResetTime} your local time
+              ({timezoneOffset} GMT).</Typography>
+            <Typography variant="h5">Time remaining until next reset: {timeRemaining}</Typography>
+          </Box>
+        </Container>
+
+        <Box sx={{mt: 3, textAlign: 'center', position: 'absolute', bottom: 0, width: '100%'}}>
+          <Link href="https://github.com/aaxyat/nova-credits" target="_blank" rel="noopener" color="inherit">
+            <IconButton>
+              <GitHubIcon/>
+            </IconButton>
+            Check this project on GitHub
+          </Link>
         </Box>
-      </Container>
-      <Box sx={{ mt: 3, textAlign: 'center', position: 'absolute', bottom: 0, width: '100%' }}>
-        <Link href="https://github.com/aaxyat/nova-credits" target="_blank" rel="noopener" color="inherit">
-          <IconButton>
-            <GitHubIcon />
-          </IconButton>
-          Check this project on GitHub
-        </Link>
-      </Box>
-    </ThemeProvider>
+      </ThemeProvider>
   );
 }
 
